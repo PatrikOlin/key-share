@@ -1,26 +1,25 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LayoutCard from './components/layout-card/layout-card';
+import mockKeyboards from './utils/mock-keyboards';
+
+const Layouts = ({keyboards}) => (
+  <>
+    {keyboards.map(keyboard => (
+      <LayoutCard key={keyboard.id} keyboard={keyboard}>{keyboard.title}</LayoutCard>
+    ))}
+  </>
+);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Layouts keyboards={keyboards}></Layouts>
+		</div>
+	);
 }
+
+const keyboards = mockKeyboards.keyboards;
 
 export default App;

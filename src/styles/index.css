@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+  --quantum: linear-gradient(to left, var(--purp) 19%, var(--pink) 100%);
+  --purp: #922DD9;
+  --pink: #FE3180;
+  --yellow: #F5CF42;
+  --green: #47B084;
+  --darkGrey: #232323;
+  --black: #141414;
+}
+
+html, body {
+  height: 100%;
+  background: var(--black);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.header-quantum {
+  background: var(--quantum);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Exo 2';
+font-style: normal;
+font-weight: 900;
+font-size: 2.5rem;
+line-height: 3rem;
+text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Exo 2';
+  text-transform: uppercase;
+font-style: normal;
+font-weight: 900;
+font-size: 1.5rem;
+
+}
+
+p {
+  font-family: 'Dosis';
+  font-style: normal;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+code, pre {
+  font-family: 'Inconsolata';
+  color: white;
+font-style: normal;
+font-weight: normal;
+font-size: 1rem;
+line-height: 1rem;
+}
+
+.bg-quantum {
+  background: linear-gradient(to left, #922DD9 19%, #FE3180 100%);
+}
+
+.btn {
+  @apply font-headers uppercase h-10 w-40;
+}
+
+.btn-primary {
+  background: var(--quantum);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-width: 4px;
+  border-style: solid;
+  border-image: var(--quantum);
+  border-image-slice: 1;
+}
+
+
+@tailwind utilities;
