@@ -8,7 +8,7 @@ import ImageBox from '../image-box/image-box';
 import CodeBlock from '../code-block/code-block';
 
 const useStyles = makeStyles({
-    root: {
+    panel: {
         backgroundColor: 'var(--darkGrey)'
     }
 });
@@ -26,9 +26,9 @@ class LayoutCard extends Component {
         const {title, image, description, keymapLink, author, layouts, parts} = this.state.keyboard;
 		return ( 
 			<main className="container mx-auto my-4 w-full justify-center">
-				<section>
-					<ExpansionPanel className="bg-darkGrey">
-						<ExpansionPanelSummary className={classes.root}>
+				<section className={classes.root}>
+					<ExpansionPanel className={classes.panel}>
+						<ExpansionPanelSummary className={classes.panel}>
 							<h1 className="header-quantum h1">
                                 {title}
 							</h1>
